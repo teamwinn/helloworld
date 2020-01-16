@@ -15,7 +15,7 @@ pipeline {
 
       stage('Test'){
         steps {
-        sh './node_modules/mocha/bin/mocha'
+        sh './node_modules/mocha/bin/mocha --exit'
         }
       }
 
