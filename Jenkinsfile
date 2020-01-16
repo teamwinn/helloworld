@@ -9,8 +9,8 @@ pipeline {
       }
       stage('Setup'){
         steps {
-        sh 'sudo npm config set registry http://registry.npmjs.org'
-        sh 'sudo npm install'
+        sh 'npm config set registry http://registry.npmjs.org'
+        sh 'npm install --save-dev'
         }
       }
 
@@ -23,7 +23,7 @@ pipeline {
       stage('Cleanup'){
         steps {
         echo 'prune and cleanup'
-        sh 'sudo npm prune'
+        sh 'npm prune'
         sh 'rm node_modules -rf'
       }
     }
