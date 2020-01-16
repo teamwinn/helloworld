@@ -9,7 +9,6 @@ pipeline {
       }
       stage('Setup'){
         steps {
-        sh 'npm config set registry http://registry.npmjs.org'
         sh 'npm install --save-dev'
         }
       }
